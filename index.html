@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Access</title>
+<meta name="theme-color" content="#b01e28">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#FFFFFF; --paper:#FFFFFF; --ink:#1B1B1B; --soft:#6A6A66; --grey:#767672;
+  --hair:#E5E2D9; --faint:#CFCCC2; --accent:#B01E28; --wash:#FAF8F4;
+  --serif:"EB Garamond",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}
+.mono{font-family:var(--mono)}
+.soft{color:var(--soft)}
+
+header.site{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding:26px 32px 16px;border-bottom:1px solid var(--hair)}
+header.site h1{margin:0;font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:.01em}
+header.site .sub{margin:0;color:var(--soft);font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+main{max-width:1180px;margin:0 auto;padding:22px 32px 40px}
+.site-foot{max-width:1180px;margin:0 auto;padding:20px 32px 40px;border-top:1px solid var(--hair);color:var(--soft);font-size:14px}
+.btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:11px 20px;border:1px solid var(--accent);border-radius:2px;background:var(--accent);color:#fff}
+.btn:hover{background:#8F1820;border-color:#8F1820}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.ghost:hover{background:rgba(176,30,40,.06)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn.quiet{border-color:var(--faint);background:transparent;color:var(--soft);font-size:10px;padding:6px 10px}
+.btn.quiet:hover{color:var(--accent);border-color:var(--accent);background:transparent}
+
+#z0{max-width:1180px;margin:0 auto;padding:22vh 32px 40px;display:flex;justify-content:center}
+#z0 form{width:100%;max-width:19rem}
+label{display:block;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--soft);margin-bottom:6px}
+input{width:100%;font-family:var(--serif);font-size:17px;padding:9px 10px;border:1px solid var(--faint);border-radius:2px;background:#fff;color:var(--ink)}
+input[type=number]{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:16px}
+.line{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.line>div{flex:1 1 9rem;min-width:0}
+.msg{font-family:var(--mono);font-size:11px;letter-spacing:.03em;margin-top:10px;min-height:1.2em;color:var(--accent)}
+
+.hero-title{font-family:var(--serif);font-weight:600;font-size:42px;line-height:1.08;margin:0 0 14px;letter-spacing:-.01em}
+@media(max-width:700px){.hero-title{font-size:31px}}
+.qb{font-size:20px;line-height:1.5;max-width:62ch;margin:0 0 8px}
+.cols{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:34px;margin-top:26px;align-items:start}
+@media(max-width:860px){.cols{grid-template-columns:minmax(0,1fr);gap:26px}}
+section.block{border-top:1px solid var(--hair);padding-top:14px;margin-top:26px}
+section.block>h2{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--soft);font-weight:400;margin:0 0 12px}
+section.block.first{border-top:0;padding-top:0;margin-top:22px}
+.q0{font-family:var(--mono);font-size:11px;letter-spacing:.08em;border:1px solid var(--hair);border-radius:2px;padding:4px 10px;color:var(--soft);margin-left:auto}
+.q0:hover{color:var(--accent);border-color:var(--accent)}
+
+.q2{display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:5px}
+.q1{aspect-ratio:1/1;border:1px solid var(--hair);border-radius:2px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:2px;overflow:hidden;cursor:pointer}
+.q1:hover{border-color:var(--accent)}
+.q1 b{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:16px;font-weight:500;line-height:1}
+.q1 span{font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1}
+.q1[data-t="1"]{background:var(--wash);cursor:default}
+.q1[data-t="1"] b{color:var(--grey);font-weight:400}
+.q1[data-t="1"]:hover{border-color:var(--hair)}
+.q1[data-c="1"] b{color:var(--accent)}
+.q1[data-b="1"]{background:var(--accent);border-color:var(--accent)}
+.q1[data-b="1"] b,.q1[data-b="1"] span{color:#fff}
+.qa{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--soft);margin:10px 0 0}
+
+ol.q3{list-style:none;counter-reset:r;margin:0;padding:0}
+ol.q3 li{counter-increment:r;position:relative;padding:0 0 12px 30px;font-size:16.5px;line-height:1.45}
+ol.q3 li::before{content:counter(r);position:absolute;left:0;top:2px;font-family:var(--mono);font-size:10px;color:var(--accent);border:1px solid var(--faint);border-radius:2px;width:19px;height:19px;display:flex;align-items:center;justify-content:center}
+ol.q3 b{font-weight:600}
+.q5{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border:1px solid var(--faint);border-radius:2px;padding:7px 10px;display:inline-block;margin-bottom:14px}
+table.q4{border-collapse:collapse;width:100%;margin:8px 0 2px;font-size:15.5px}
+table.q4 td{border-bottom:1px solid var(--hair);padding:5px 0;vertical-align:baseline}
+table.q4 td.t{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:13px;color:var(--accent);width:4.6rem;white-space:nowrap}
+table.q4 tr:last-child td{border-bottom:0}
+
+table.cx{border-collapse:collapse;width:100%;font-size:16px}
+table.cx th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);text-align:left;border-bottom:1px solid var(--ink);padding:7px 8px 5px;font-weight:400}
+table.cx td{border-bottom:1px solid var(--hair);padding:8px;vertical-align:baseline}
+table.cx td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;width:3.2rem}
+table.cx tr[data-b="1"] td{color:var(--accent)}
+table.cx tr[data-d="1"] td{color:var(--grey)}
+.q7{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);border-radius:2px;padding:1px 5px;margin-left:6px;white-space:nowrap}
+.q7.qf{border-color:var(--faint);color:var(--grey)}
+.q8{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--soft);text-transform:uppercase}
+.q8 b{font-size:22px;color:var(--accent);font-weight:500;font-variant-numeric:tabular-nums}
+.q6{border-left:3px solid var(--accent);padding:2px 0 2px 14px;margin:0 0 18px}
+.q6 .head{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.15}
+.q6 p{margin:6px 0 0;font-size:16.5px}
+.q9{color:var(--soft);font-size:16px;padding:10px 0}
+</style>
+</head>
+<body>
+
+<div id="z0">
+  <form id="z1" autocomplete="off">
+    <label for="z4">Password</label>
+    <div class="line">
+      <div><input type="password" id="z4" autocomplete="current-password"></div>
+      <button class="btn" type="submit" id="z2">→</button>
+    </div>
+    <div class="msg" id="z3" role="status"></div>
+  </form>
+</div>
+
+<div id="z5" hidden></div>
+
+<script>
+var U = "https://script.google.com/macros/s/AKfycbyqVv2qlnV1E6pV-LTxv6zCAAUVcMRB-v-7QyhfqLO4frUU8yvtyRuLUls9MYemDg1Stg/exec";
+var W1 = "Wrong password.", W2 = "Not answering. Try again.", W3 = "…";
+var P = null, L = "en", T = null;
+
+try { var a0 = localStorage.getItem("s.l"); if (a0) L = a0; } catch (e) {}
+try { var b0 = sessionStorage.getItem("s.k"); if (b0) P = b0; } catch (e) {}
+
+function $(i){ return document.getElementById(i); }
+
+function req(o){
+  var b = { k: P || "", l: L };
+  for (var k in o) b[k] = o[k];
+  return fetch(U, {
+    method: "POST",
+    redirect: "follow",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify(b)
+  })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (!d || d.e === "0") throw { e: "0" };
+      if (d.t !== undefined) {
+        $("z5").innerHTML = d.t;
+        if (d.n) document.title = d.n;
+        document.documentElement.lang = L;
+      }
+      return d;
+    });
+}
+
+/* tutto quello che si puo' fare sta in quello che arriva: qui si inoltra e basta */
+document.addEventListener("click", function(ev){
+  var el = ev.target && ev.target.closest ? ev.target.closest("[data-l],[data-v],[data-a]") : null;
+  if (!el) return;
+  if (el.getAttribute("data-l")) {
+    ev.preventDefault();
+    L = el.getAttribute("data-l");
+    try { localStorage.setItem("s.l", L); } catch (e) {}
+    req({}).catch(function(){});
+    return;
+  }
+  if (el.getAttribute("data-v")) {
+    var i1 = document.querySelector("[data-r]");
+    if (i1) i1.value = el.getAttribute("data-v");
+    var i2 = document.querySelector("[data-f]");
+    if (i2) i2.focus();
+    return;
+  }
+  if (el.tagName === "BUTTON" && el.type !== "submit") {
+    ev.preventDefault();
+    el.disabled = true;
+    req({ a: el.getAttribute("data-a"), n: el.getAttribute("data-n") || "" })
+      .catch(function(){ el.disabled = false; });
+  }
+});
+
+document.addEventListener("submit", function(ev){
+  var f = ev.target;
+  if (!f || !f.getAttribute || !f.getAttribute("data-a")) return;
+  ev.preventDefault();
+  var o = { a: f.getAttribute("data-a") };
+  var ins = f.querySelectorAll("input[name]");
+  for (var i = 0; i < ins.length; i++) o[ins[i].name] = ins[i].value;
+  var bt = f.querySelector("button[type=submit]");
+  if (bt) bt.disabled = true;
+  req(o).catch(function(){}).then(function(){ if (bt) bt.disabled = false; });
+});
+
+function loop(){
+  if (T) clearInterval(T);
+  T = setInterval(function(){
+    var ae = document.activeElement;
+    if (ae && ae.tagName === "INPUT") return;
+    var i1 = document.querySelector("[data-r]");
+    if (i1 && i1.value) return;
+    req({}).catch(function(){});
+  }, 20000);
+}
+
+function open2(){
+  $("z0").hidden = true;
+  $("z5").hidden = false;
+  loop();
+}
+
+$("z1").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var v = $("z4").value.trim();
+  if (!v) return;
+  P = v;
+  $("z2").disabled = true;
+  $("z3").textContent = W3;
+  req({}).then(function(){
+    try { sessionStorage.setItem("s.k", P); } catch (e) {}
+    $("z3").textContent = "";
+    $("z2").disabled = false;
+    open2();
+  }).catch(function(err){
+    P = null;
+    $("z2").disabled = false;
+    $("z3").textContent = (err && err.e === "0") ? W1 : W2;
+  });
+});
+
+if (P) {
+  req({}).then(open2).catch(function(){
+    P = null;
+    try { sessionStorage.removeItem("s.k"); } catch (e) {}
+  });
+}
+</script>
+</body>
+</html>
