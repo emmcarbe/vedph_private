@@ -118,12 +118,20 @@ table.cx tr[data-d="1"] td{color:var(--grey)}
 <script>
 var U = "https://script.google.com/macros/s/AKfycbyqVv2qlnV1E6pV-LTxv6zCAAUVcMRB-v-7QyhfqLO4frUU8yvtyRuLUls9MYemDg1Stg/exec";
 var W1 = "Wrong password.", W2 = "Not answering. Try again.", W3 = "…";
-var P = null, L = "en", T = null;
+var P = null, L = "en", T = null, D = null;
 
 try { var a0 = localStorage.getItem("s.l"); if (a0) L = a0; } catch (e) {}
 try { var b0 = sessionStorage.getItem("s.k"); if (b0) P = b0; } catch (e) {}
 
 function $(i){ return document.getElementById(i); }
+
+function mostra(){
+  var c = D && (D[L] || D.en || D.it);
+  if (!c) return;
+  $("z5").innerHTML = c.t;
+  if (c.n) document.title = c.n;
+  document.documentElement.lang = L;
+}
 
 function req(o){
   var b = { k: P || "", l: L };
@@ -137,11 +145,7 @@ function req(o){
     .then(function(r){ return r.json(); })
     .then(function(d){
       if (!d || d.e === "0") throw { e: "0" };
-      if (d.t !== undefined) {
-        $("z5").innerHTML = d.t;
-        if (d.n) document.title = d.n;
-        document.documentElement.lang = L;
-      }
+      if (d.p) { D = d.p; mostra(); }
       return d;
     });
 }
@@ -154,7 +158,7 @@ document.addEventListener("click", function(ev){
     ev.preventDefault();
     L = el.getAttribute("data-l");
     try { localStorage.setItem("s.l", L); } catch (e) {}
-    req({}).catch(function(){});
+    if (D && D[L]) mostra(); else req({}).catch(function(){});
     return;
   }
   if (el.getAttribute("data-v")) {
